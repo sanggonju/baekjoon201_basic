@@ -1,4 +1,4 @@
-package math.mod_01;
+package chapter1.math.mod_01;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package math.gcdAndLcm;
+package chapter1.math.gcdAndLcm;
 
 import java.util.Scanner;
 

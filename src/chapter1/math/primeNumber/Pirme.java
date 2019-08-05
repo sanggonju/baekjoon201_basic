@@ -1,4 +1,4 @@
-package math.primeNumber;
+package chapter1.math.primeNumber;
 
 /*
 소수 구하기
