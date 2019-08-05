@@ -1,4 +1,9 @@
 package chapter2.bruteForce;
+
+
+
+
+
 /*
 일곱 난쟁이 스페셜 저지
 시간 제한	메모리 제한	제출	정답	맞은 사람	정답 비율
@@ -30,16 +35,46 @@ package chapter2.bruteForce;
 7
 8
 10
-13
+13	
 19
 20
 23
  */
+
+import java.util.Scanner;
+import java.util.Arrays;
+
 public class sevenDwarf {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Scanner sc = new Scanner(System.in);
+        int n = 9; //드워프 9명
+        int[] a = new int[n];
+        int sum = 0;//모든 드워프(9명)의 합
+        //9명드워프합 - 2명의합이 =100일겨우
+        int d1 = 0;
+        int d2 = 0;
+        for (int i=0; i<n; i++) {
+            a[i] = sc.nextInt();
+            sum += a[i];
+        }
+        Arrays.sort(a);
+        for (int i = 0; i < n; i++) {
+			for (int j = i+1; j < n; j++) {
+				if(sum-(a[i]+a[j])==100) {
+					d1 = i;
+					d2 = j;
+				}
+			}
+		}
+        
+        
+        
+        for (int i = 0; i < n; i++) {
+        	if(i==d1 || i ==d2) continue;
+        	System.out.println(a[i]);
+			
+		}
 	}
 
 }
